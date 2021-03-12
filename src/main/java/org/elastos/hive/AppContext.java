@@ -45,7 +45,7 @@ public class AppContext {
 		this.contextProvider = provider;
 	}
 
-	public static void setupResover(String resolver, String cacheDir) throws HiveException {
+	public static void setupResolver(String resolver, String cacheDir) throws HiveException {
 		if (cacheDir == null || resolver == null)
 			throw new IllegalArgumentException("invalid value for parameter resolver or cacheDir");
 
@@ -133,7 +133,7 @@ public class AppContext {
 		});
 	}
 
-	AuthToken getAuthenToken() {
+	AuthToken getAuthToken() {
 		return tokenResolver.getToken();
 	}
 }

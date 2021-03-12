@@ -13,7 +13,7 @@ public class AppContextTest {
 	@Test
 	public void testRetupResover() {
 		try {
-			AppContext.setupResover("fake", "fake");
+			AppContext.setupResolver("fake", "fake");
 			assertTrue(true);
 		} catch (HiveException e) {
 			e.printStackTrace();

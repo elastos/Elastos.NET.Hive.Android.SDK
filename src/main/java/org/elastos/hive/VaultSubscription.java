@@ -2,7 +2,6 @@ package org.elastos.hive;
 
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.TimeUnit;
 
 import org.elastos.hive.exception.HiveException;
 import org.elastos.hive.payment.Order;
@@ -96,7 +95,7 @@ public class VaultSubscription {
 		public CompletableFuture<Void> activate() {
 			return CompletableFuture.supplyAsync(() -> {
 				System.out.print("Check acess token here, otherwise request the access token");
-				return context.getAuthenToken();
+				return context.getAuthToken();
 			}).thenAcceptAsync(token -> {
 				System.out.print("Call activate API here");
 				activateImpl(token);
